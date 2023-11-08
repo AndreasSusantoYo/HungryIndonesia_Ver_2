@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="tailwind.config.js"></script>
+</head>
+<body class="bg-gradient-to-b from-[#FFFAE5] via-white to-[#FFFAE5]">
+    <nav class="flex sticky top-0 justify-between z-50"
+    style="background-color: #5F5D2D;">
+        <div class="flex justify-start text-2xl mt-7 ml-24 mb-7 font-semibold"
+        style="color: #FFFAE5;">
+            <button onclick="window.location.href='HomePage.html'">HungryIndonesia</button>
+        </div>
+        <div>
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown1"
+            class="flex justify-end mt-7 mr-24 mb-7">
+                <img class="w-10" src="images/menu.png" alt="menu">
+            </button>
+            <div id="dropdown1" 
+            class="z-70 absolute top-0 right-0 hidden divide-y divide-gray-100 rounded-l-3xl shadow w-60 dark:bg-gray-700
+            pl-10"
+            style="background-color: #5F5D2D; height: 265px; position: absolute; top: -100px;">
+                <ul class="text-2xl font-semibold"
+                style="color: #FFFAE5;">
+                <li class="flex items-center">
+                    <div class="w-0 h-full border-amber-500 hover:w-4"></div>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in text-amber-500" 
+                    href="">Login</p>
+                </li>
+                <li>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in mt-4" 
+                onclick="window.location.href='Search_Recipe.html';">Search Recipe</button>
+                </li>
+                <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4">Search Resto</p>
+                </li>
+                <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4">About Us</p>
+                </li>
+                <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4">FAQ</p>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="flex mt-8">
+            <div class="ml-20">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdownSPSR"
+                class="flex mt-8 outline outline-10 text-2xl font-semibold rounded-3xl 
+                px-5 py-2 bg-[#FFFAE5] text-[#5F5D2D]">
+                    Select Province
+                </button>
+                <div id="dropdownSPSR" 
+                class="z-10 hidden divide-y divide-100 rounded-2xl absolute bottom-0 left-0 bg-white z-50"
+                style="background-color: #FFFAE5; color: #5F5D2D;">
+                    <ul class="flex flex-col text-lg font-semibold rounded-2xl outline outline-10
+                    border-gray-500">
+                        <li>
+                            <p class="px-6 pt-2 pb-2 rounded-t-2xl hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Aceh</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sumatera Utara</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sumatera Selatan</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sumatera Barat</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Bengkulu</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Riau</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Kepulauan Riau</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Jambi</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Lampung</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Bangka Belitung</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Kalimantan Barat</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Kalimantan Timur</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Kalimantan Selatan</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Kalimantan Tengah</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Kalimantan Utara</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Banten</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">DKI Jakarta</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Jawa Barat</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Jawa Tengah</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">DIY</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Jawa Timur</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Bali</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Nusa Tenggara Timur</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Nusa Tenggara Barat</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Gorontalo</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sulawesi Barat</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sulawesi Tengah</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sulawesi Utara</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sulawesi Tenggara</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Sulawesi Selatan</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Maluku Utara</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Maluku</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Papua Barat</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Papua</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Papua Tengah</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Papua Pegunungan</p>
+                        </li>
+                        <li>
+                            <p class="px-6 pt-2 pb-2 hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Papua Selatan</p>
+                        </li>
+                        <li>
+                            <P class="px-6 pt-2 pb-2 rounded-b-2xl hover:bg-[#AEAB88] hover:text-[#FFFAE5]">Papua Barat Daya</P>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdownSB"
+                class="flex mt-8 ml-28 outline outline-10 text-2xl font-semibold rounded-3xl 
+                px-5 py-2 bg-[#FFFAE5] text-[#5F5D2D]">
+                    Sort by
+                </button>
+                <div id="dropdownSB" 
+                class="z-10 hidden divide-y divide-100 rounded-2xl absolute bottom-0 left-0 bg-white z-50"
+                style="background-color: #FFFAE5; color: #5F5D2D;">
+                    <ul class="flex flex-col text-lg font-semibold rounded-2xl outline outline-10 border-gray-500">
+                        <li class="px-6 py-2 rounded-t-2xl hover:bg-[#AEAB88] hover:text-[#FFFAE5]">
+                            <button>Highest Rating</button>
+                        </li>
+                        <li class="px-6 py-2 rounded-b-2xl hover:bg-[#AEAB88] hover:text-[#FFFAE5]">
+                            <button>Most Popular</button>
+                        </li>
+                    </ul>
+                </div>       
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="flex bg-[#C9C8AE] mx-20 mt-16 p-5 rounded-3xl ">
+            <img class="w-96" src="images/Soto_Betawi.png">
+            <div class="mt-2 ml-10">
+                <h1 class="text-3xl text-[#5F5D2D] font-bold">Soto Betawi</h1>
+                <p class="text-lg mt-1">Lorem ipsum dolor sit amet consectetur. Quam amet scelerisque enim <br>
+                    convallis. Nulla massa praesent gravida accumsan placerat. Hendrerit <br>
+                    consectetur vehicula dolor elit mi tempus.</p>
+                <div class="flex mt-8">
+                    <img class="w-5 h-5 self-center" src="images/Location.png" alt="Location">
+                    <p class="ml-4 text-xl font-medium text-[#5F5D2D]"><strong>Location</strong></p>
+                </div>
+                <div class="flex mt-1">
+                    <img class="w-5 h-5 self-center" src="images/Star.png" alt="Star">
+                    <p class="ml-2 text-lg font-medium text-[#5F5D2D]">4.5 (95 reviews)</p>
+                </div>
+                <div class="flex mt-6">
+                    <div>
+                        <p class="text-lg font-medium text-[#5F5D2D]">Prep time: 20 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Cook time: 60 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Total time: 80 mins</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid place-content-end ml-[170px]">
+                <button class="bg-amber-500 text-amber-100 text-xl font-semibold px-7 py-3 rounded-full
+                shadow-lg hover:bg-amber-100 hover:text-amber-500" 
+                onclick="window.location.href='Soto_Betawi_Recipe.html'">
+                    View Recipe
+                </button>
+            </div>
+        </div>
+        <div class="flex bg-[#C9C8AE] mx-20 mt-8 p-5 rounded-3xl ">
+            <img class="w-96" src="images/Pempek.png">
+            <div class="mt-2 ml-10">
+                <h1 class="text-3xl text-[#5F5D2D] font-bold">Pempek</h1>
+                <p class="text-lg mt-1">Lorem ipsum dolor sit amet consectetur. Quam amet scelerisque enim <br>
+                    convallis. Nulla massa praesent gravida accumsan placerat. Hendrerit <br>
+                    consectetur vehicula dolor elit mi tempus.</p>
+                <div class="flex mt-8">
+                    <img class="w-5 h-5 self-center" src="images/Location.png" alt="Location">
+                    <p class="ml-4 text-xl font-medium text-[#5F5D2D]"><strong>Location</strong></p>
+                </div>
+                <div class="flex mt-1">
+                    <img class="w-5 h-5 self-center" src="images/Star.png" alt="Star">
+                    <p class="ml-2 text-lg font-medium text-[#5F5D2D]">4.7 (95 reviews)</p>
+                </div>
+                <div class="flex mt-6">
+                    <div>
+                        <p class="text-lg font-medium text-[#5F5D2D]">Prep time: 20 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Cook time: 60 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Total time: 80 mins</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid place-content-end ml-[170px]">
+                <button class="bg-amber-500 text-amber-100 text-xl font-semibold px-7 py-3 rounded-full
+                shadow-lg hover:bg-amber-100 hover:text-amber-500">
+                    View Recipe
+                </button>
+            </div>
+        </div>
+        <div class="flex bg-[#C9C8AE] mx-20 mt-8 p-5 rounded-3xl ">
+            <img class="w-96" src="images/Coto_Makasar.png">
+            <div class="mt-2 ml-10">
+                <h1 class="text-3xl text-[#5F5D2D] font-bold">Coto Makasar</h1>
+                <p class="text-lg mt-1">Lorem ipsum dolor sit amet consectetur. Quam amet scelerisque enim <br>
+                    convallis. Nulla massa praesent gravida accumsan placerat. Hendrerit <br>
+                    consectetur vehicula dolor elit mi tempus.</p>
+                <div class="flex mt-8">
+                    <img class="w-5 h-5 self-center" src="images/Location.png" alt="Location">
+                    <p class="ml-4 text-xl font-medium text-[#5F5D2D]"><strong>Location</strong></p>
+                </div>
+                <div class="flex mt-1">
+                    <img class="w-5 h-5 self-center" src="images/Star.png" alt="Star">
+                    <p class="ml-2 text-lg font-medium text-[#5F5D2D]">4.7 (95 reviews)</p>
+                </div>
+                <div class="flex mt-6">
+                    <div>
+                        <p class="text-lg font-medium text-[#5F5D2D]">Prep time: 20 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Cook time: 60 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Total time: 80 mins</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid place-content-end ml-[170px]">
+                <button class="bg-amber-500 text-amber-100 text-xl font-semibold px-7 py-3 rounded-full
+                shadow-lg hover:bg-amber-100 hover:text-amber-500">
+                    View Recipe
+                </button>
+            </div>
+        </div>
+        <div class="flex bg-[#C9C8AE] mx-20 mt-8 p-5 rounded-3xl ">
+            <img class="w-96" src="images/Gudeg.png">
+            <div class="mt-2 ml-10">
+                <h1 class="text-3xl text-[#5F5D2D] font-bold">Gudeg</h1>
+                <p class="text-lg mt-1">Lorem ipsum dolor sit amet consectetur. Quam amet scelerisque enim <br>
+                    convallis. Nulla massa praesent gravida accumsan placerat. Hendrerit <br>
+                    consectetur vehicula dolor elit mi tempus.</p>
+                <div class="flex mt-8">
+                    <img class="w-5 h-5 self-center" src="images/Location.png" alt="Location">
+                    <p class="ml-4 text-xl font-medium text-[#5F5D2D]"><strong>Location</strong></p>
+                </div>
+                <div class="flex mt-1">
+                    <img class="w-5 h-5 self-center" src="images/Star.png" alt="Star">
+                    <p class="ml-2 text-lg font-medium text-[#5F5D2D]">4.7 (95 reviews)</p>
+                </div>
+                <div class="flex mt-6">
+                    <div>
+                        <p class="text-lg font-medium text-[#5F5D2D]">Prep time: 20 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Cook time: 60 mins</p>
+                    </div>
+                    <div>
+                        <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Total time: 80 mins</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid place-content-end ml-[170px]">
+                <button class="bg-amber-500 text-amber-100 text-xl font-semibold px-7 py-3 rounded-full
+                shadow-lg hover:bg-amber-100 hover:text-amber-500">
+                    View Recipe
+                </button>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="flex justify-center items-center mt-28 mb-12 ml-5 text-amber-500 text-2xl font-bold">
+            <p>Uncover Tasty Treasures, One Recipe and Restaurant at a Time</p>
+        </div>
+        <hr class="border-t-1 border-gray-500">
+        <div class="flex justify-between mt-5 mb-5">
+            <div class="ml-16">
+                <p class="text-2xl font-semibold text-[#5F5D2D]">Company</p>
+                <ul class="text-lg text-[#C9C8AE] font-normal">
+                    <li>
+                        <button>
+                            About us
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            FAQ
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-32">
+                <p class="text-2xl font-semibold text-[#5F5D2D]">Products</p>
+                <ul class="text-lg text-[#C9C8AE] font-normal">
+                    <li>
+                        <button>
+                            Indonesian Recipe
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            Indonesian Restaurant
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="mr-[445px]">
+                <p class="text-2xl font-semibold text-[#5F5D2D]">Support</p>
+                <ul class="text-lg text-[#C9C8AE] font-normal">
+                    <li>
+                        Help
+                    </li>
+                    <li>
+                        Terms
+                    </li>
+                    <li>
+                        Privacy
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-t-1 border-gray-500">
+        <div class="flex flex-col ml-2 mt-12 mb-16 ">
+            <div class="flex self-center">
+                <img class="w-6 h-6 self-center" src="images/Instagram.png" alt="Instagram">
+                <img class="h-5 mx-3 self-center" src="images/Facebook.png" alt="Facebook">
+                <img class="w-6 h-5 self-center" src="images/Twitter.png" alt="Twitter">
+            </div>
+            <p class="self-center mt-2 text-lg text-[#5F5D2D]"><strong>@ 2023 HungryIndonesia. All Right Reserved.</strong></p>
+        </div>
+    </footer>
+</body>
+</html>
