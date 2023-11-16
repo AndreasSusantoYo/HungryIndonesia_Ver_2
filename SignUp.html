@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - HungryIndonesia</title>
+    <title>Sign Up - HungryIndonesia</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
       rel="stylesheet"
@@ -106,20 +106,25 @@
       <div class="flex justify-center">
         <!-- Login Button -->
         <button
-          class="w-1/2 border-2 px-20 py-2 rounded-l-3xl border-r-0 text-[#5F5D2D] bg-[#5f5d2d] text-[#fff] font-bold shadow-inner"
+          class="w-1/2 border-2 px-20 py-2 rounded-l-3xl border-r-0 text-[#5F5D2D] font-bold hover:bg-[#c9c8ae] shadow-inner"
+          onclick="window.location.href='login.html'"
         >
           Log In
         </button>
 
         <!-- Signup Button -->
         <button
-          class="w-1/2 border-2 px-20 py-2 rounded-r-3xl border-l-0 text-[#5F5D2D] font-bold hover:bg-[#c9c8ae] shadow-inner"
-          onclick="window.location.href='SignUp.html'"
+          class="w-1/2 border-2 px-20 py-2 rounded-r-3xl border-l-0 text-[#5F5D2D] bg-[#5f5d2d] text-[#fff] font-bold shadow-inner"
         >
           Sign Up
         </button>
       </div>
       <div>
+        <input
+          type="text"
+          class="w-full rounded-3xl mt-4 px-12 shadow-inner"
+          placeholder="Full Name"
+        />
         <input
           type="email"
           class="w-full rounded-3xl mt-4 px-12 shadow-inner"
@@ -129,6 +134,11 @@
           type="password"
           class="w-full rounded-3xl mt-4 px-12 shadow-inner"
           placeholder="Password"
+        />
+        <input
+          type="password"
+          class="w-full rounded-3xl mt-4 px-12 shadow-inner"
+          placeholder="Confirm Password"
         />
         <button
           class="w-full bg-[#5F5D2D] text-white font-bold rounded-3xl mt-3 py-3 hover:bg-[#c9c8ae]"
