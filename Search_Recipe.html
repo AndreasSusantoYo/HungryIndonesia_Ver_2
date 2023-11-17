@@ -53,15 +53,19 @@
     </nav>
     <header>
         <div class="flex mt-8">
-            <div class="ml-20">
+            <div class="ml-20 flex">
+                <button class="self-center mt-8"
+                    onclick="window.location.href='HomePageIn.html';">
+                    <img class="w-8" src="images/back.png" alt="">
+                </button>
                 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdownSPSR"
-                class="flex mt-8 outline outline-10 text-2xl font-semibold rounded-3xl 
-                px-5 py-2 bg-[#FFFAE5] text-[#5F5D2D]">
+                    class="flex mt-8 ml-[33px] outline outline-10 text-2xl font-semibold rounded-3xl 
+                    px-5 py-2 bg-[#FFFAE5] text-[#5F5D2D]">
                     Select Province
                 </button>
                 <div id="dropdownSPSR" 
-                class="z-10 hidden divide-y divide-100 rounded-2xl absolute bottom-0 left-0 bg-white z-50"
-                style="background-color: #FFFAE5; color: #5F5D2D;">
+                    class="z-10 hidden divide-y divide-100 rounded-2xl absolute bottom-0 left-0 bg-white z-50"
+                    style="background-color: #FFFAE5; color: #5F5D2D;">
                     <ul class="flex flex-col text-lg font-semibold rounded-2xl outline outline-10
                     border-gray-500">
                         <li>
@@ -183,7 +187,7 @@
             </div>
             <div>
                 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdownSB"
-                class="flex mt-8 ml-28 outline outline-10 text-2xl font-semibold rounded-3xl 
+                class="flex mt-8 ml-[105px] outline outline-10 text-2xl font-semibold rounded-3xl 
                 px-5 py-2 bg-[#FFFAE5] text-[#5F5D2D]">
                     Sort by
                 </button>
