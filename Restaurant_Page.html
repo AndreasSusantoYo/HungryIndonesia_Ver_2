@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+        rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="tailwind.config.js"></script>
+</head>
+<style>
+    .carousel {
+      position: relative;
+      width: 1320px;
+    }
+    .flickity-prev-next-button {
+      top: 105%;
+      transform: translateX(100%);
+    }
+
+    .flickity-prev-next-button.previous {
+      width: 40px;
+      height: 40px;
+      left: 43.7%;
+      color: white;
+      background: #ffa101;
+    }
+
+    .flickity-prev-next-button.next {
+      width: 40px;
+      height: 40px;
+      right: 48.7%;
+      color: white;
+      background: #ffa101;
+    }
+  </style>
+<body class="bg-[#FFFAE5]">
+    <nav
+        class="flex sticky top-0 justify-between z-50"
+        style="background-color: #5f5d2d"
+    >
+        <div
+        class="flex justify-start text-2xl mt-7 ml-24 mb-7 font-semibold"
+        style="color: #fffae5"
+        >
+        <button onclick="window.location.href='HomePageIn.html'">
+            HungryIndonesia
+        </button>
+        </div>
+        <div>
+        <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown1"
+            class="flex justify-end mt-7 mr-24 mb-7"
+        >
+            <img class="w-10" src="images/menu.png" alt="menu" />
+        </button>
+        <!--             <div id="dropdown1" 
+            class="hidden divide-y divide-gray-100 rounded-l-3xl shadow w-[250px] dark:bg-gray-700
+            pl-10 transition-none"
+            style="background-color: #5F5D2D; height: 265px; position: absolute; top: -100px;">
+                <ul class="text-[22px] font-semibold"
+                style="color: #FFFAE5;">
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in 
+                    text-amber-500" 
+                    href="">Login</button>
+                </li>
+                <li class="flex items-center mt-3 hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in" 
+                    onclick="window.location.href='Search_Recipe.html';">Search Recipe</button>
+                </li>
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='Search_Recipe.html';"
+                    >Search Resto</button>
+                </li>
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='Search_Recipe.html';"
+                    >About Us</button>
+                </li>
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='Search_Recipe.html';"
+                    >FAQ</button>
+                </li>
+                </ul>
+            </div> -->
+        <div
+            id="dropdown1"
+            class="z-70 absolute top-0 right-0 hidden divide-y divide-gray-100 rounded-l-3xl shadow w-60 
+            h-[450px] dark:bg-gray-700 pl-10"
+            style="
+            background-color: #5f5d2d;
+            
+            position: absolute;
+            top: -100px;
+            "
+        >
+            <ul class="text-2xl font-semibold" style="color: #fffae5">
+            <li class="flex items-center">
+                <div class="w-0 h-full border-amber-500 hover:w-4"></div>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in"
+                onclick="window.location.href='Search_Recipe.html';">
+                    Name
+                </p>
+            </li>
+            <li>
+                <button
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='Search_Recipe.html';"
+                >
+                Search Recipe
+                </button>
+            </li>
+            <li>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='';">
+                Search Resto
+                </p>
+            </li>
+            <li>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='AboutUs.html';">
+                About Us
+                </p>
+            </li>
+            <li>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='Faq.html';">
+                FAQ
+                </p>
+            </li>
+            <li>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='';">
+                My Review
+                </p>
+            </li>
+            <li>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='';">
+                Recent Recipe
+                </p>
+            </li>
+            <li>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='MyCooklist.html';">
+                Cooklist
+                </p>
+            </li>
+            <li>
+                <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='HomePageLand.html';">
+                Log Out
+                </p>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <header class="mt-[67px]">
+        <div class="flex flex-row justify-start">
+            <button class="item-center" onclick="window.location.href='HomePageIn.html';">
+                <img class="ml-[73px] w-8" src="images/back.png" alt="">
+            </button>
+            <p class="item-center ml-[17px] mb-1 text-[#5F5D2D] text-4xl font-sans font-extrabold">Soto Betawi by Soto Betawi H. Mamat</p>
+        </div>
+        <div class="flex flex-row text-[#5F5D2D]">
+            <img class="self-center mt-[17px] ml-[77px] w-[22px]" src="images/Location (2).png">
+            <p class="flex self-center mt-4 ml-[22px] text-2xl font-semibold underline">
+                Jl. Boulevard Raya Gading Serponng No.l, Pakulonan Bar., Kec. KLP. Dua, Kabupaten Tangerang, Banten 15810
+            </p>
+        </div>
+        <div class="flex justify-between mt-4">
+            <div
+                class="flex justify-between ml-[73px] w-[300px] h-[58px] border-2 rounded-full place-items-center
+                py-2 px-3 border-[#ddd9c7] shadow-[inset_0_0_7px_rgba(0,0,0,0.3)]"
+            >
+                <img src="images/full-star.png" alt="" class="w-[30px] h-[30px]" />
+                <img src="images/full-star.png" alt="" class="w-[30px] h-[30px]" />
+                <img src="images/full-star.png" alt="" class="w-[30px] h-[30px]" />
+                <img src="images/full-star.png" alt="" class="w-[30px] h-[30px]" />
+                <img src="images/half-star.png" alt="" class="w-[30px] h-[30px]" />
+                <span class=" text-[#5F5D2D] text-xl font-bold">4.7 / 5</span>
+            </div>
+            <div 
+                class="flex pl-7 mr-[73px] w-[198px] h-[58px] border-2 rounded-full place-items-center
+                py-2 px-3 border-[#ddd9c7] shadow-[inset_0_0_7px_rgba(0,0,0,0.3)]">
+                <img src="images/Instagram.png" class="w-[33px] h-[33px]">
+                <img src="images/Facebook.png" class="ml-[23px] h-[33px]">
+                <img src="images/Twitter.png" class="ml-[23px] h-[30px]">
+            </div>
+        </div>
+    </header>
+    <article class="flex flex-col justify-center">
+        <div
+            class="carousel mt-24 outline outline-none ml-[100px] mb-52"
+            data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": true, 
+                "pageDots": false, "cellAlign": "right"}'>
+            <div
+                class="card roup relative w-[420px] h-[420px] bg-cover bg-no-repeat rounded-2xl mt-0 mr-4 ml-1"
+                style="background-image: url(images/SHM1.png);">
+            </div>
+            <div
+                class="card roup relative w-[420px] h-[420px] bg-cover bg-no-repeat rounded-2xl mt-0 mr-4 ml-1"
+                style="background-image: url(images/SHM2.png);">
+            </div>
+            <div
+                class="card roup relative w-[420px] h-[420px] bg-cover bg-no-repeat rounded-2xl mt-0 mr-4 ml-1"
+                style="background-image: url(images/SHM3.png);">
+            </div>
+            <div
+                class="card roup relative w-[420px] h-[420px] bg-cover bg-no-repeat rounded-2xl mt-0 mr-4 ml-1"
+                style="background-image: url(images/SHM4.png);">
+            </div>
+            <div
+                class="card roup relative w-[420px] h-[420px] bg-cover bg-no-repeat rounded-2xl mt-0 mr-4 ml-1"
+                style="background-image: url(images/SHM5.png);">
+            </div>            
+            <div
+                class="card roup relative w-[420px] h-[420px] bg-cover bg-no-repeat rounded-2xl mt-0 mr-4 ml-1"
+                style="background-image: url(images/SHM6.png);">
+            </div>
+        </div>
+        <p class=" text-xl text-[#5F5D2D] font-semibold">
+            Soto Betawi H. Mamat is considered as one of the best Soto Betawi in town. Moreover, it was established in 1960 and has since<br>
+            grown into a legendary eateries in Tangerang. Lots of people compete to save a seat inside this eatery to savor the perfect<br>
+            combination of the meat and the coconut milk soup.
+        </p>
+        <p>Interested in cooking the recipes?</p>
+    </article>
+</body>
+</html>

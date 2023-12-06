@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="tailwind.config.js"></script>
+</head>
+<body class="bg-[#FFFAE5]">
+    <nav class="flex sticky top-0 justify-between z-50"
+    style="background-color: #5F5D2D;">
+        <div class="flex justify-start text-2xl mt-7 ml-24 mb-7 font-semibold"
+        style="color: #FFFAE5;">
+            <button onclick="window.location.href='HomePage.html'">HungryIndonesia</button>
+        </div>
+        <div>
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown1"
+            class="flex justify-end mt-7 mr-24 mb-7">
+                <img class="w-10" src="images/menu.png" alt="menu">
+            </button>
+            <div
+            id="dropdown1"
+            class="z-70 absolute top-0 right-0 hidden divide-y divide-gray-100 rounded-l-3xl shadow w-60 
+            h-[450px] dark:bg-gray-700 pl-10"
+            style="
+                background-color: #5f5d2d;
+                
+                position: absolute;
+                top: -100px;
+            "
+            >
+                <ul class="text-2xl font-semibold" style="color: #fffae5">
+                    <li class="flex items-center">
+                    <div class="w-0 h-full border-amber-500 hover:w-4"></div>
+                        <p class="hover:translate-x-[20%] transition duration-150 ease-in"
+                        onclick="window.location.href='Search_Recipe.html';">
+                        Name
+                        </p>
+                    </li>
+                    <li>
+                    <button
+                        class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                        onclick="window.location.href='Search_Recipe.html';"
+                    >
+                        Search Recipe
+                    </button>
+                    </li>
+                    <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='';">
+                        Search Resto
+                    </p>
+                    </li>
+                    <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='AboutUs.html';">
+                        About Us
+                    </p>
+                    </li>
+                    <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='Faq.html';">
+                        FAQ
+                    </p>
+                    </li>
+                    <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='';">
+                        My Review
+                    </p>
+                    </li>
+                    <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='';">
+                        Recent Recipe
+                    </p>
+                    </li>
+                    <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='MyCooklist.html';">
+                        Cooklist
+                    </p>
+                    </li>
+                    <li>
+                    <p class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='HomePageLand.html';">
+                        Log Out
+                    </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div>
+            <div class="mt-8 ml-20 text-[#5F5D2D]">
+                <h1 class="text-4xl font-bold"><strong>Soto Betawi</strong></h1>
+                <p class="mt-1 text-md font-semibold">Food Origin: DKI Jakarta</p>
+                <p class="mt-2 text-xl font-bold">Recipe approved by Soto Betawi H. Mamat</p>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

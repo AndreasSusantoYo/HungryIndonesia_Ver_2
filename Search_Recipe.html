@@ -10,6 +10,35 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="tailwind.config.js"></script>
+    <script>
+        function toggleVisibility(button) {
+            // Add your existing toggleVisibility logic here
+        }
+
+        function sortByHighestRating() {
+            // Get all recipe elements
+            const recipeElements = document.querySelectorAll('.recipe');
+
+            // Convert NodeList to array for easier sorting
+            const recipeArray = Array.from(recipeElements);
+
+            // Sort the recipes by rating (assuming you have a data attribute for rating)
+            recipeArray.sort((a, b) => {
+                const ratingA = parseFloat(a.dataset.rating || 0);
+                const ratingB = parseFloat(b.dataset.rating || 0);
+                return ratingB - ratingA;
+            });
+
+            // Remove existing recipe elements from the container
+            const container = document.getElementById('recipeContainer');
+            container.innerHTML = '';
+
+            // Append the sorted recipe elements back to the container
+            recipeArray.forEach(recipe => {
+                container.appendChild(recipe);
+            });
+        }
+    </script>
 </head>
 <body class="bg-gradient-to-b from-[#FFFAE5] via-white to-[#FFFAE5]">
     <nav class="flex sticky top-0 justify-between z-50"
@@ -260,9 +289,9 @@
         </div>
     </header>
     <article>
-        <div class="flex bg-[#C9C8AE] mx-20 mt-16 p-5 rounded-3xl ">
+        <div id="recipeContainer" class="flex bg-[#C9C8AE] mx-20 mt-16 p-5 rounded-3xl ">
             <img class="w-96" src="images/Soto_Betawi.png">
-            <div class="mt-2 ml-10">
+            <div class="recipe mt-2 ml-10">
                 <h1 class="text-3xl text-[#5F5D2D] font-bold">Soto Betawi</h1>
                 <p class="text-lg mt-1">Lorem ipsum dolor sit amet consectetur. Quam amet scelerisque enim <br>
                     convallis. Nulla massa praesent gravida accumsan placerat. Hendrerit <br>
@@ -286,6 +315,9 @@
                         <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Total time: 80 mins</p>
                     </div>
                 </div>
+                <script>
+                    document.getElementById('sortByHighestRatingButton').addEventListener('click', sortByHighestRating);
+                </script>
             </div>
             <div class="grid place-content-end ml-[170px]">
                 <button class="bg-amber-500 text-amber-100 text-xl font-semibold px-7 py-3 rounded-full
@@ -295,9 +327,9 @@
                 </button>
             </div>
         </div>
-        <div class="flex bg-[#C9C8AE] mx-20 mt-8 p-5 rounded-3xl ">
+        <div id="recipeContainer" class="flex bg-[#C9C8AE] mx-20 mt-8 p-5 rounded-3xl ">
             <img class="w-96" src="images/Pempek.png">
-            <div class="mt-2 ml-10">
+            <div class="recipe mt-2 ml-10">
                 <h1 class="text-3xl text-[#5F5D2D] font-bold">Pempek</h1>
                 <p class="text-lg mt-1">Lorem ipsum dolor sit amet consectetur. Quam amet scelerisque enim <br>
                     convallis. Nulla massa praesent gravida accumsan placerat. Hendrerit <br>
@@ -321,6 +353,9 @@
                         <p class="ml-4 text-lg font-medium text-[#5F5D2D]">Total time: 80 mins</p>
                     </div>
                 </div>
+                <script>
+                    document.getElementById('sortByHighestRatingButton').addEventListener('click', sortByHighestRating);
+                </script>
             </div>
             <div class="grid place-content-end ml-[170px]">
                 <button class="bg-amber-500 text-amber-100 text-xl font-semibold px-7 py-3 rounded-full
