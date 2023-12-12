@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="bg-[#fffae5]">
+    <nav
+      class="flex sticky top-0 justify-between z-50"
+      style="background-color: #5f5d2d"
+    >
+      <div
+        class="flex justify-start text-2xl mt-7 ml-24 mb-7 font-semibold"
+        style="color: #fffae5"
+      >
+        <button onclick="window.location.href='HomePageIn.html'">
+          HungryIndonesia
+        </button>
+      </div>
+      <div>
+        <button
+          id="dropdownDefaultButton"
+          data-dropdown-toggle="dropdown1"
+          class="flex justify-end mt-7 mr-24 mb-7"
+        >
+          <img class="w-10" src="images/menu.png" alt="menu" />
+        </button>
+        <!--             <div id="dropdown1" 
+            class="hidden divide-y divide-gray-100 rounded-l-3xl shadow w-[250px] dark:bg-gray-700
+            pl-10 transition-none"
+            style="background-color: #5F5D2D; height: 265px; position: absolute; top: -100px;">
+                <ul class="text-[22px] font-semibold"
+                style="color: #FFFAE5;">
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in 
+                    text-amber-500" 
+                    href="">Login</button>
+                </li>
+                <li class="flex items-center mt-3 hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in" 
+                    onclick="window.location.href='Search_Recipe.html';">Search Recipe</button>
+                </li>
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='Search_Recipe.html';"
+                    >Search Resto</button>
+                </li>
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='Search_Recipe.html';"
+                    >About Us</button>
+                </li>
+                <li class="flex items-center hover:w-1 hover:h-6 hover:bg-amber-500" role="group">
+                    <div class="w-[1px] h-[1px] bg-[#5F5D2D] "></div>
+                    <button class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                    onclick="window.location.href='Search_Recipe.html';"
+                    >FAQ</button>
+                </li>
+                </ul>
+            </div> -->
+        <div
+          id="dropdown1"
+          class="z-70 absolute top-0 right-0 hidden divide-y divide-gray-100 rounded-l-3xl shadow w-60 h-[450px] dark:bg-gray-700 pl-10"
+          style="
+            background-color: #5f5d2d;
+
+            position: absolute;
+            top: -100px;
+          "
+        >
+          <ul class="text-2xl font-semibold" style="color: #fffae5">
+            <li class="flex items-center">
+              <div class="w-0 h-full border-amber-500 hover:w-4"></div>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in"
+                onclick="window.location.href='Search_Recipe.html';"
+              >
+                Name
+              </p>
+            </li>
+            <li>
+              <button
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='Search_Recipe.html';"
+              >
+                Search Recipe
+              </button>
+            </li>
+            <li>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='';"
+              >
+                Search Resto
+              </p>
+            </li>
+            <li>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='AboutUs.html';"
+              >
+                About Us
+              </p>
+            </li>
+            <li>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='Faq.html';"
+              >
+                FAQ
+              </p>
+            </li>
+            <li>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='';"
+              >
+                My Review
+              </p>
+            </li>
+            <li>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='';"
+              >
+                Recent Recipe
+              </p>
+            </li>
+            <li>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='MyCooklist.html';"
+              >
+                Cooklist
+              </p>
+            </li>
+            <li>
+              <p
+                class="hover:translate-x-[20%] transition duration-150 ease-in mt-4"
+                onclick="window.location.href='HomePageLand.html';"
+              >
+                Log Out
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="ml-10 mt-10 flex justify-between">
+      <div class="flex">
+        <div>
+          <a href="HomePageIn.html" class="w-8 h-8 inline-block"
+            ><img src="images/back.png" alt="" class="w-8"
+          /></a>
+        </div>
+        <div class="inline-block ml-3">
+          <h1 class="font-bold text-4xl text-[#5f5d2d]">Soto Betawi</h1>
+          <h4 class="text-[#5F5D2D] font-semibold">Food Origin: DKI JAKARTA</h4>
+          <h2 class="text-[#5F5D2D] font-bold text-xl">
+            Recipe Approved by Soto Betawi H. Mamat
+          </h2>
+        </div>
+      </div>
+      <div class="mr-10">
+        <div
+          class="flex gap-2 border-2 rounded-3xl py-2 px-3 border-[#ddd9c7] shadow-inner"
+        >
+          <img src="images/full-star.png" alt="" class="w-5 h-5" />
+          <img src="images/full-star.png" alt="" class="w-5 h-5" />
+          <img src="images/full-star.png" alt="" class="w-5 h-5" />
+          <img src="images/full-star.png" alt="" class="w-5 h-5" />
+          <img src="images/half-star.png" alt="" class="w-5 h-5" />
+          <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+        </div>
+      </div>
+    </div>
+    <div class="ml-14 mt-5">
+      <h1 class="text-[#5F5D2D] font-bold text-3xl">Review</h1>
+      <div class="z-40">
+        <button
+          id="dropdownDefaultButton"
+          data-dropdown-toggle="dropdownSB"
+          class="flex mt-8 h-[50px] outline outline-10 text-2xl font-semibold rounded-3xl px-5 py-2 bg-[#FFFAE5] text-[#5F5D2D]"
+          onclick="toggleVisibility(this)"
+        >
+          <div class="flex justify-between">
+            <p class="self-center mb-2">Sort by</p>
+            <img
+              class="self-center w-3 h-3 mb-2 ml-[17px] rotateImage transition duration-300 ease-out"
+              src="images/SEARCHRCPDROPDOWN.png"
+            />
+          </div>
+        </button>
+        <div
+          id="dropdownSB"
+          class="z-10 hidden divide-y divide-100 rounded-2xl absolute bottom-0 left-0 bg-white z-50"
+          style="background-color: #fffae5; color: #5f5d2d"
+        >
+          <ul
+            class="flex flex-col text-lg font-semibold rounded-2xl outline outline-10 border-gray-500"
+          >
+            <li
+              class="px-6 py-2 rounded-t-2xl hover:bg-[#AEAB88] hover:text-[#FFFAE5]"
+            >
+              <button>Highest Rating</button>
+            </li>
+            <li
+              class="px-6 py-2 rounded-b-2xl hover:bg-[#AEAB88] hover:text-[#FFFAE5]"
+            >
+              <button>Most Popular</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ml-14 mt-8 mr-14 shadow-inner">
+      <div class="bg-[#c9c8ae] rounded-3xl px-8 py-4 shadow-inner">
+        <div class="flex justify-between">
+          <div>
+            <h1 class="text-[#5F5D2D] font-bold text-2xl mb-3">Jenny Wilson</h1>
+            <div class="flex gap-2">
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/half-star.png" alt="" class="w-5 h-5" />
+              <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-[#fff]">11 August 2023</h1>
+          </div>
+        </div>
+        <div class="mt-3">
+          <p class="text-justify text-[#5F5D2D] font-semibold text-lg">
+            Saya baru-baru ini mencoba resep Soto Betawi ini dan saya tidak bisa
+            lebih puas dengan hasilnya. Saya suka dengan panduan langkah demi
+            langkah yang sangat membantu, bahkan bagi pemula seperti saya. Ini
+            benar-benar membawa saya kembali ke rasa Indonesia yang autentik!
+            Resep ini bakal jadi resep soto betawi kesukaanku!!!
+          </p>
+        </div>
+        <div class="mt-3 flex justify-end gap-2">
+          <img src="images/love.png" alt="" class="w-5 h-5" />
+          <p class="text-[#fff] font-bold">(60 likes)</p>
+        </div>
+      </div>
+    </div>
+    <div class="ml-14 mt-8 mr-14 shadow-inner">
+      <div class="bg-[#c9c8ae] rounded-3xl px-8 py-4 shadow-inner">
+        <div class="flex justify-between">
+          <div>
+            <h1 class="text-[#5F5D2D] font-bold text-2xl mb-3">Jane Cooper</h1>
+            <div class="flex gap-2">
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/half-star.png" alt="" class="w-5 h-5" />
+              <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-[#fff]">21 October 2023</h1>
+          </div>
+        </div>
+        <div class="mt-3">
+          <p class="text-justify text-[#5F5D2D] font-semibold text-lg">
+            Saya sudah mencoba beberapa resep Soto Betawi sebelumnya, tetapi
+            resep ini benar-benar mencuri hati saya. Kuahnya benar-benar
+            autentik, dan daging sapi yang lembut adalah puncaknya. Saya senang
+            dengan instruksi yang jelas dan mudah diikuti. Hasil akhirnya luar
+            biasa, dan saya pasti akan membuatnya lagi. Keluarga saya juga tidak
+            bisa mengkonsumsi santan terlalu banyak sehingga saya mengikuti
+            bahan alternatif yang diberikan dan hasilnya masih sangat memuaskan.
+          </p>
+        </div>
+        <div class="mt-3 flex justify-end gap-2">
+          <img src="images/love.png" alt="" class="w-5 h-5" />
+          <p class="text-[#fff] font-bold">(120 likes)</p>
+        </div>
+      </div>
+    </div>
+    <div class="ml-14 mt-8 mr-14 shadow-inner">
+      <div class="bg-[#c9c8ae] rounded-3xl px-8 py-4 shadow-inner">
+        <div class="flex justify-between">
+          <div>
+            <h1 class="text-[#5F5D2D] font-bold text-2xl mb-3">Jacob Jones</h1>
+            <div class="flex gap-2">
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/half-star.png" alt="" class="w-5 h-5" />
+              <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-[#fff]">25 July 2023</h1>
+          </div>
+        </div>
+        <div class="mt-3">
+          <p class="text-justify text-[#5F5D2D] font-semibold text-lg">
+            Resep Soto Betawi ini adalah sukses besar di rumah saya. Seluruh
+            keluarga sangat menyukainya. Soto Betawi ini benar-benar enak dan
+            membuat seluruh rumah harum dengan aromanya.
+          </p>
+        </div>
+        <div class="mt-3 flex justify-end gap-2">
+          <img src="images/love.png" alt="" class="w-5 h-5" />
+          <p class="text-[#fff] font-bold">(120 likes)</p>
+        </div>
+      </div>
+    </div>
+    <div class="ml-14 mt-8 mr-14 shadow-inner">
+      <div class="bg-[#c9c8ae] rounded-3xl px-8 py-4 shadow-inner">
+        <div class="flex justify-between">
+          <div>
+            <h1 class="text-[#5F5D2D] font-bold text-2xl mb-3">Wade Warren</h1>
+            <div class="flex gap-2">
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/half-star.png" alt="" class="w-5 h-5" />
+              <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-[#fff]">21 October 2023</h1>
+          </div>
+        </div>
+        <div class="mt-3">
+          <p class="text-justify text-[#5F5D2D] font-semibold text-lg">
+            Soto Betawi adalah salah satu makanan kesukaan saya, dan resep ini
+            memang tidak mengecewakan. Hasil akhirnya adalah hidangan yang
+            autentik dan lezat. Saya sangat merekomendasikan resep ini kepada
+            siapa pun yang ingin mencoba masakan Indonesia yang luar biasa."
+            Semua testimoni ini mencerminkan pengalaman positif orang-orang yang
+            telah mencoba resep Soto Betawi dan menikmati hasilnya.
+          </p>
+        </div>
+        <div class="mt-3 flex justify-end gap-2">
+          <img src="images/love.png" alt="" class="w-5 h-5" />
+          <p class="text-[#fff] font-bold">(120 likes)</p>
+        </div>
+      </div>
+    </div>
+    <div class="ml-14 mt-8 mr-14 shadow-inner">
+      <div class="bg-[#c9c8ae] rounded-3xl px-8 py-4 shadow-inner">
+        <div class="flex justify-between">
+          <div>
+            <h1 class="text-[#5F5D2D] font-bold text-2xl mb-3">
+              Esther Howard
+            </h1>
+            <div class="flex gap-2">
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/full-star.png" alt="" class="w-5 h-5" />
+              <img src="images/half-star.png" alt="" class="w-5 h-5" />
+              <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-[#fff]">21 October 2023</h1>
+          </div>
+        </div>
+        <div class="mt-3">
+          <p class="text-justify text-[#5F5D2D] font-semibold text-lg">
+            Saya mencoba banyak resep Soto Betawi sebelumnya, tetapi ini adalah
+            yang terbaik yang pernah saya coba. Kuahnya sangat lezat dan daging
+            sapi yang empuk membuatnya begitu nikmat.
+          </p>
+        </div>
+        <div class="mt-3 flex justify-end gap-2">
+          <img src="images/love.png" alt="" class="w-5 h-5" />
+          <p class="text-[#fff] font-bold">(120 likes)</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button
+        id="showReviewButton"
+        class="ml-14 mt-5 rounded-3xl border-1 bg-[#5f5d2d] py-3 px-5 font-bold text-[#FFF] text-lg hover:bg-[#c9c8ae] hover:text-[#5F5D2D]"
+      >
+        Write a Review
+      </button>
+    </div>
+    <div
+        id="reviewDiv"
+        class="hidden mt-5 bg-[#c9c8ae] rounded-3xl shadow-inner h-fit p-5 ml-14 mr-14"
+      >
+        <input
+          type="text"
+          name=""
+          id=""
+          class="w-full rounded-3xl border-0 h-[200px] px-10 py-0 text-lg leading-5"
+          placeholder="Type here..."
+        />
+        <div class="flex justify-between mt-5 ml-3">
+          <div>
+            <input
+              type="checkbox"
+              name=""
+              id="Made-Recipe"
+              class="rounded w-6 h-6 mr-1"
+            />
+            <label for="Made-Recipe" class="font-semibold text-[#5F5D2D]"
+              >I Have Already Made This Recipe Before Writing This Review</label
+            >
+          </div>
+          <div class="flex gap-2">
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/half-star.png" alt="" class="w-5 h-5" />
+            <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+          </div>
+        </div>
+        <div class="mt-5 flex justify-end">
+          <button
+            class="rounded-3xl border-1 bg-[#5f5d2d] py-3 px-5 font-bold text-[#FFF] text-lg"
+          >
+            Post Review
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center items-center">
+      <div class="text-center">
+        <p class="text-[#5F5D2D] font-bold text-xl block">
+          Interested in going to the restaurant?
+        </p>
+        <button
+          class="border-1 bg-[#ffa101] rounded-3xl py-3 px-5 text-[#fffae5] font-bold mt-5 hover:bg-[#fef9e4] hover:text-[#ffa101] hover:shadow-inner hover:border-[#e0dbc9]"
+        >
+          Go to Restaurant
+        </button>
+      </div>
+    </div>
+    <footer>
+      <div
+        class="flex justify-center items-center mt-[75px] mb-12 ml-5 text-amber-500 text-2xl font-bold"
+      >
+        <p>Uncover Tasty Treasures, One Recipe and Restaurant at a Time</p>
+      </div>
+      <hr class="border-t-1 border-gray-500" />
+      <div class="flex justify-between mt-5 mb-5">
+        <div class="ml-16">
+          <p class="text-2xl font-semibold text-[#5F5D2D]">Company</p>
+          <ul class="text-lg text-[#C9C8AE] font-normal">
+            <li>
+              <button>About us</button>
+            </li>
+            <li>
+              <button>FAQ</button>
+            </li>
+          </ul>
+        </div>
+        <div class="ml-32">
+          <p class="text-2xl font-semibold text-[#5F5D2D]">Products</p>
+          <ul class="text-lg text-[#C9C8AE] font-normal">
+            <li>
+              <button>Indonesian Recipe</button>
+            </li>
+            <li>
+              <button>Indonesian Restaurant</button>
+            </li>
+          </ul>
+        </div>
+        <div class="mr-[445px]">
+          <p class="text-2xl font-semibold text-[#5F5D2D]">Support</p>
+          <ul class="text-lg text-[#C9C8AE] font-normal">
+            <li>Help</li>
+            <li>Terms</li>
+            <li>Privacy</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-t-1 border-gray-500" />
+      <div class="flex flex-col ml-2 mt-12 mb-16">
+        <div class="flex self-center">
+          <img
+            class="w-6 h-6 self-center"
+            src="images/Instagram.png"
+            alt="Instagram"
+          />
+          <img
+            class="h-5 mx-3 self-center"
+            src="images/Facebook.png"
+            alt="Facebook"
+          />
+          <img
+            class="w-6 h-5 self-center"
+            src="images/Twitter.png"
+            alt="Twitter"
+          />
+        </div>
+        <p class="self-center mt-2 text-lg text-[#5F5D2D]">
+          <strong>@ 2023 HungryIndonesia. All Right Reserved.</strong>
+        </p>
+      </div>
+      <script>
+        document
+          .getElementById("showReviewButton")
+          .addEventListener("click", function () {
+            // Toggle the visibility of the review div
+            document.getElementById("reviewDiv").classList.toggle("hidden");
+          });
+      </script>
+    </footer>
+  </body>
+</html>
