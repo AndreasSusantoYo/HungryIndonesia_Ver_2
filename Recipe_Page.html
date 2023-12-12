@@ -403,10 +403,51 @@
       </div>
       <div>
         <button
+          id="showReviewButton"
           class="self-end justify-self-end rounded-3xl border-1 bg-[#5f5d2d] py-3 px-5 font-bold text-[#FFF] text-lg hover:bg-[#c9c8ae] hover:text-[#5F5D2D]"
         >
           Write a Review
         </button>
+      </div>
+      <div
+        id="reviewDiv"
+        class="hidden mt-5 bg-[#c9c8ae] rounded-3xl shadow-inner h-fit p-5"
+      >
+        <input
+          type="text"
+          name=""
+          id=""
+          class="w-full rounded-3xl border-0 h-[200px] px-10 py-0 text-lg leading-5"
+          placeholder="Type here..."
+        />
+        <div class="flex justify-between mt-5 ml-3">
+          <div>
+            <input
+              type="checkbox"
+              name=""
+              id="Made-Recipe"
+              class="rounded w-6 h-6 mr-1"
+            />
+            <label for="Made-Recipe" class="font-semibold text-[#5F5D2D]"
+              >I Have Already Made This Recipe Before Writing This Review</label
+            >
+          </div>
+          <div class="flex gap-2">
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/full-star.png" alt="" class="w-5 h-5" />
+            <img src="images/half-star.png" alt="" class="w-5 h-5" />
+            <span class="text-[#5F5D2D] font-bold">4.5 / 5</span>
+          </div>
+        </div>
+        <div class="mt-5 flex justify-end">
+          <button
+            class="rounded-3xl border-1 bg-[#5f5d2d] py-3 px-5 font-bold text-[#FFF] text-lg"
+          >
+            Post Review
+          </button>
+        </div>
       </div>
     </div>
     <footer>
@@ -472,5 +513,13 @@
         </p>
       </div>
     </footer>
+    <script>
+      document
+        .getElementById("showReviewButton")
+        .addEventListener("click", function () {
+          // Toggle the visibility of the review div
+          document.getElementById("reviewDiv").classList.toggle("hidden");
+        });
+    </script>
   </body>
 </html>
